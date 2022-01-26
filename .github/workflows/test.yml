@@ -1,9 +1,9 @@
 name: Hello World
 on: push
-  jobs:
-    build:
-      name: Hello World action
-      runs-on: ubuntu-latest
-      steps:
-        - run: echo "hello world!!"
-        - run: echo "hello world again!!"
+jobs:
+  build:
+    name: Hello World action
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "hello world!!"
+      - run: echo "hello world again!!"

@@ -1,13 +1,15 @@
-name: Hello World
+name: Build status
 on: push
 jobs:
   build:
-    name: Hello World action
+    name: Build App
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello world!!"
-  build:
-    name: Hello World action again
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "hello world again!!"
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.17.5'
+      - run: npm install
+      - run: npm test
+      - run: npm run build
+  

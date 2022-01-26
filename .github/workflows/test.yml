@@ -6,4 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello world!!"
+    name: Hello World action again
+    runs-on: ubuntu-latest
+    steps:
       - run: echo "hello world again!!"

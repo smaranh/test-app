@@ -1,5 +1,6 @@
 name: Build status
-on: push
+on: 
+  pull_request
 jobs:
   build:
     name: Build App

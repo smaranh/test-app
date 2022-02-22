@@ -1,3 +1,21 @@
+# [2.0.0](https://github.com/smaranh/test-app/compare/v1.0.0...v2.0.0) (2022-02-22)
+
+
+### Bug Fixes
+
+* Major ([#6](https://github.com/smaranh/test-app/issues/6)) ([8881689](https://github.com/smaranh/test-app/commit/88816893e1b02a4cf636c29a34a7786b1486cea2))
+
+
+### BREAKING CHANGES
+
+* add package-lock
+
+* add release-drafter
+
+* feat: specify the config file location
+
+
+
 # [1.0.0](https://github.com/smaranh/test-app/compare/v0.2.0...v1.0.0) (2022-02-22)
 
 

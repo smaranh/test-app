@@ -1,7 +1,21 @@
 name: Build status
 on: 
-  pull_request
+  pull_request:
+    types: [opened, synchronize, edited, reopened]
+
+env:
+  REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
+
 jobs:
+  pr-lint:
+    name: Pull request Linting
+    runs-on: ubuntu-latest
+    steps:
+      - name: Lint pull request title
+        uses: jef/conventional-commits-pr-action@v1
+        with:
+          token: ${{secrets.REPO_TOKEN}}
+
   build:
     name: Build App
     runs-on: ubuntu-latest

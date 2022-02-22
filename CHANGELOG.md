@@ -1,3 +1,12 @@
+## [2.0.1](https://github.com/smaranh/test-app/compare/v2.0.0...v2.0.1) (2022-02-22)
+
+
+### Bug Fixes
+
+* update config file location ([7b8cb77](https://github.com/smaranh/test-app/commit/7b8cb77aa395ee166d044c9d8953cea921edccc8))
+
+
+
 # [2.0.0](https://github.com/smaranh/test-app/compare/v1.0.0...v2.0.0) (2022-02-22)
 
 

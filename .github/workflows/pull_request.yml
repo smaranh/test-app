@@ -1,6 +1,7 @@
 name: Build status
 on: 
-  pull_request
+  pull_request:
+    types: [opened, synchronize, edited, reopened]
 
 env:
   REPO_TOKEN: ${{ secrets.REPO_TOKEN }}

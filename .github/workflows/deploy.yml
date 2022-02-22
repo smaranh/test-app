@@ -53,5 +53,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: '14.17.5'
+      - run: echo //npm.pkg.github.com/:_authToken=${{secrets.NPM_TOKEN}} >> ~/.npmrc
       - run: npm ci
       - run: npm publish

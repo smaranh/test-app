@@ -1,8 +1,11 @@
 name: Build status
 on: 
   pull_request
-jobs:
 
+env:
+  REPO_TOKEN: ${{ secrets.REPO_TOKEN }}
+
+jobs:
   pr-lint:
     name: Pull request Linting
     runs-on: ubuntu-latest

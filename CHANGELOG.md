@@ -1,3 +1,12 @@
+# [2.1.0](https://github.com/smaranh/test-app/compare/v2.0.1...v2.1.0) (2022-02-22)
+
+
+### Features
+
+* change to release drafter template ([7494185](https://github.com/smaranh/test-app/commit/7494185de650254756bb47d17dde40b213b7387e))
+
+
+
 ## [2.0.1](https://github.com/smaranh/test-app/compare/v2.0.0...v2.0.1) (2022-02-22)
 
 

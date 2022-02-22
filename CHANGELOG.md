@@ -1,4 +1,20 @@
-# 0.2.0 (2022-02-22)
+# [1.0.0](https://github.com/smaranh/test-app/compare/v0.2.0...v1.0.0) (2022-02-22)
+
+
+### Features
+
+* add package-lock ([#5](https://github.com/smaranh/test-app/issues/5)) ([8a7e222](https://github.com/smaranh/test-app/commit/8a7e222ef1440003df9bed9cbc6a97269d3e1873))
+
+
+### BREAKING CHANGES
+
+* add package-lock
+
+* add release-drafter
+
+
+
+# [0.2.0](https://github.com/smaranh/test-app/compare/a649e2d5b93c68875634701b3c463a4aef09b983...v0.2.0) (2022-02-22)
 
 
 ### Bug Fixes

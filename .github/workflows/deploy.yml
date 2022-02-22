@@ -1,0 +1,36 @@
+name: Deploy
+
+on: 
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'package.json'
+      - 'CHANGELOG.md'
+
+jobs:
+  build:
+    name: Run CI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.17.5'
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
+
+  changelog:
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.REPO_TOKEN }}
+    - name: Bump version and push tag
+      uses: TriPSs/conventional-changelog-action@master
+      with:
+        github-token: ${{ secrets.REPO_TOKEN }}
+        git-message: 'chore(release): {version}'
+        output-file: 'CHANGELOG.md'

@@ -5,15 +5,7 @@ on:
     types: [opened, synchronize, edited, reopened]
 
 jobs:
-  # pr-lint:
-  #   name: Pull request Linting
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - name: Lint pull request title
-  #       uses: jef/conventional-commits-pr-action@v1
-  #       with:
-  #         token: ${{secrets.GITHUB_TOKEN}}
-  
+
   pr-lint:
     name: Verify title format
     runs-on: ubuntu-latest
@@ -56,23 +48,6 @@ jobs:
 
             :tipping_hand_person: For more examples, visit [https://www.conventionalcommits.org/en/v1.0.0/#examples](https://www.conventionalcommits.org/en/v1.0.0/#examples).
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-
-  # pr-lint:
-  #   name: Verify title format
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: morrisoncole/pr-lint-action@v1.6.0
-  #       with:
-  #         title-regex: '^(BREAKING CHANGE|build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([a-z ]+\))?: [\w ]+$'
-  #         on-failed-regex-comment: >
-  #           Pull request titles must follow [conventional commit](https://www.conventionalcommits.org/en/v1.0.0-beta.2/#summary) formatting. This allows us to increment the version correctly + also to maintain consistency in our changelog.
-  #           #### Title regex
-  #           `^(BREAKING CHANGE|build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([a-z ]+\))?: [\w ]+$`
-  #           ### Examples
-  #           - `fix: a small CSS bug in checkout`
-  #           - `feat: added a cool new feature`
-  #           - `docs(setup): provide better documentation regarding Node version`
-  #         repo-token: ${{ secrets.GITHUB_TOKEN }}
 
   build:
     name: Build App

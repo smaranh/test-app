@@ -44,16 +44,16 @@ jobs:
             <details>
             <summary>Examples</summary>
 
-            \`\`\`
-            feat(grpc): add new endpoint
-            refactor: combine class A and class B
-            ci: update pull request linter
-            style: change format of strings
-            \`\`\`
+              ```
+              feat(grpc): add new endpoint
+              refactor: combine class A and class B
+              ci: update pull request linter
+              style: change format of strings
+              ```
 
             </details>
 
-            :tipping_hand_person: For more examples, visit https://www.conventionalcommits.org/en/v1.0.0/#examples.
+            :tipping_hand_person: For more examples, visit [https://www.conventionalcommits.org/en/v1.0.0/#examples](https://www.conventionalcommits.org/en/v1.0.0/#examples).
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
   # pr-lint:

@@ -21,6 +21,7 @@ jobs:
       - uses: morrisoncole/pr-lint-action@v1.6.0
         with:
           title-regex: '^(BREAKING CHANGE|build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([a-z ]+\))?: [\w ]+$'
+          on-failed-regex-fail-action: true
           on-failed-regex-comment: >
             ## Pull request title linting :rotating_light:
 
@@ -42,14 +43,14 @@ jobs:
               - **revert**: Reverts a previous commit
             ---
             <details>
-            <summary>Examples</summary>
+              <summary>Examples</summary>
 
-              ```
-              feat(grpc): add new endpoint
-              refactor: combine class A and class B
-              ci: update pull request linter
-              style: change format of strings
-              ```
+                ```
+                feat(grpc): add new endpoint
+                refactor: combine class A and class B
+                ci: update pull request linter
+                style: change format of strings
+                ```
 
             </details>
 

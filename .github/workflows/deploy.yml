@@ -34,8 +34,7 @@ jobs:
       id: protection_off
       uses: octokit/request-action@v2.x
       with:
-        route: PUT /repos/:owner/:repository/branches/main/protection
-        owner: ${{github.actor}}
+        route: PUT /repos/:repository/branches/main/protection
         repository: ${{github.repository}}
         required_status_checks: |
           null
@@ -47,8 +46,8 @@ jobs:
           null
       env:
         GITHUB_TOKEN: ${{secrets.REPO_TOKEN}}
-    - name: Output after Protection is Off
-      run: "echo latest release: ${{ steps.protection_off.outputs.data }}"
+    # - name: Output after Protection is Off
+    #   run: "echo latest release: ${{ steps.protection_off.outputs.data }}"
     - name: Bump version and push tag
       id: conventional-changelog
       uses: TriPSs/conventional-changelog-action@v3
@@ -70,9 +69,8 @@ jobs:
       id: protection_on
       uses: octokit/request-action@v2.x
       with:
-        route: PUT /repos/:owner/:repository/branches/main/protection
+        route: PUT /repos/:repository/branches/main/protection
         repository: ${{github.repository}}
-        owner: ${{github.actor}}
         required_status_checks: |
           strict: true
         enforce_admins: |

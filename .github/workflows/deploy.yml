@@ -34,7 +34,8 @@ jobs:
       id: protection_off
       uses: octokit/request-action@v2.x
       with:
-        route: PUT /repos/:repository/branches/main/protection
+        route: PUT /repos/:owner/:repository/branches/main/protection
+        owner: ${{github.actor}}
         repository: ${{github.repository}}
         required_status_checks: |
           null
@@ -69,8 +70,9 @@ jobs:
       id: protection_on
       uses: octokit/request-action@v2.x
       with:
-        route: PUT /repos/:repository/branches/main/protection
+        route: PUT /repos/:owner/:repository/branches/main/protection
         repository: ${{github.repository}}
+        owner: ${{github.actor}}
         required_status_checks: |
           strict: true
         enforce_admins: |

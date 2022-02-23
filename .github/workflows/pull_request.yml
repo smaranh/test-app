@@ -46,7 +46,7 @@ jobs:
 
             </details>
 
-              :tipping_hand_person: For more examples, visit [https://www.conventionalcommits.org/en/v1.0.0/#examples](https://www.conventionalcommits.org/en/v1.0.0/#examples).
+              :tipping_hand_person: For more examples, visit https://www.conventionalcommits.org/en/v1.0.0/#examples.
           repo-token: ${{ secrets.GITHUB_TOKEN }}
 
   build:

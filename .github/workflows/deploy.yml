@@ -29,12 +29,12 @@ jobs:
     - name: Check out the repo
       uses: actions/checkout@v2
       with:
-        token: ${{ secrets.REPO_TOKEN }}
+        token: ${{ secrets.GITHUB_TOKEN }}
     - name: Bump version and push tag
       id: conventional-changelog
       uses: TriPSs/conventional-changelog-action@v3
       with:
-        github-token: ${{ secrets.REPO_TOKEN }}
+        github-token: ${{ secrets.GITHUB_TOKEN }}
         git-message: 'chore(release): {version}'
         output-file: 'CHANGELOG.md'
     - name: Check the output version
@@ -45,7 +45,7 @@ jobs:
         publish: true
         version: ${{steps.conventional-changelog.outputs.version}}
       env:
-        GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   publish:
     name: Publish to Github Packages

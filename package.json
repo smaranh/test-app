@@ -1,6 +1,6 @@
 {
   "name": "test-app",
-  "version": "2.3.1",
+  "version": "2.3.2",
   "private": false,
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"

@@ -1,4 +1,13 @@
-## [2.3.1](https://github.com/smaranh/test-app/compare/v2.3.0...v2.3.1) (2022-02-23)
+## [2.3.2](https://github.com/smaranh/test-app/compare/v2.3.1...v2.3.2) (2022-02-23)
+
+
+### Bug Fixes
+
+* check output version ([#11](https://github.com/smaranh/test-app/issues/11)) ([446544c](https://github.com/smaranh/test-app/commit/446544c14ec16adaac332a45666d7e6edd16b966))
+
+
+
+## [2.3.1](https://github.com/smaranh/test-app/compare/v2.0.5...v2.3.1) (2022-02-23)
 
 
 ### Bug Fixes
@@ -13,15 +22,6 @@
 ### Features
 
 * publish draft release ([#8](https://github.com/smaranh/test-app/issues/8)) ([dd4138e](https://github.com/smaranh/test-app/commit/dd4138efdfe3c04b1a4fd083e9323b97b5ba4789))
-
-
-
-# [2.2.0](https://github.com/smaranh/test-app/compare/v2.0.3...v2.2.0) (2022-02-22)
-
-
-### Features
-
-* publish package ([#7](https://github.com/smaranh/test-app/issues/7)) ([bb6c432](https://github.com/smaranh/test-app/commit/bb6c4325992d4481594b50b29b5df864bc1ca933))
 
 
 

@@ -30,6 +30,24 @@ jobs:
       uses: actions/checkout@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Main Branch Protection OFF
+      id: protection_off
+      uses: octokit/request-action@v2.x
+      with:
+        route: PUT /repos/:repository/branches/main/protection
+        repository: ${{github.repository}}
+        required_status_checks: |
+          null
+        required_pull_request_reviews: |
+          null
+        enforce_admins: |
+          null
+        restrictions: |
+          null
+      env:
+        GITHUB_TOKEN: ${{secrets.REPO_TOKEN}}
+    - name: Output after Protection is Off
+      run: "echo latest release: ${{ steps.protection_off.outputs.data }}"
     - name: Bump version and push tag
       id: conventional-changelog
       uses: TriPSs/conventional-changelog-action@v3
@@ -40,13 +58,31 @@ jobs:
         output-file: 'CHANGELOG.md'
     - name: Check the output version
       run: echo "Output Version - ${{steps.conventional-changelog.outputs.version}}"
-    # - name: Create Release Draft
-    #   uses: release-drafter/release-drafter@v5
-    #   with:
-    #     publish: true
-    #     version: ${{steps.conventional-changelog.outputs.version}}
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create Release Draft
+      uses: release-drafter/release-drafter@v5
+      with:
+        publish: true
+        version: ${{steps.conventional-changelog.outputs.version}}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Main Branch Protection ON
+      id: protection_on
+      uses: octokit/request-action@v2.x
+      with:
+        route: PUT /repos/:repository/branches/main/protection
+        repository: ${{github.repository}}
+        required_status_checks: |
+          strict: true
+        enforce_admins: |
+          true
+        required_pull_request_reviews: |
+          required_approving_review_count: 1
+        restrictions: |
+          null
+      env:
+        GITHUB_TOKEN: ${{secrets.REPO_TOKEN}}
+    - name: Output after Protection is ON
+      run: "echo latest release: ${{ steps.protection_on.outputs.data }}"
 
   # publish:
   #   name: Publish to Github Packages

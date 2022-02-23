@@ -30,7 +30,7 @@ jobs:
             - `fix: a small CSS bug in checkout`
             - `feat: added a cool new feature`
             - `docs(setup): provide better documentation regarding Node version`
-          repo-token: ${{ secrets.REPO_TOKEN }}
+          repo-token: "${{ secrets.REPO_TOKEN }}"
 
   build:
     name: Build App

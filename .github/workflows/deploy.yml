@@ -67,7 +67,7 @@ jobs:
           -H "Accept: application/vnd.github.v3+json" \
           -H "authorization: Bearer ${{secrets.REPO_TOKEN}}" \
           https://api.github.com/repos/${{github.repository}}/branches/main/protection \
-          -d '{"required_status_checks":{"strict":true},"enforce_admins":true,"required_pull_request_reviews":{"required_approving_review_count":1},"restrictions":null}'
+          -d '{"required_status_checks":null,"enforce_admins":true,"required_pull_request_reviews":{"required_approving_review_count":1},"restrictions":null}'
 
     # - name: Output after Protection is ON
     #   run: "echo latest release: ${{ steps.protection_on.outputs.data }}"

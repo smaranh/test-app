@@ -37,12 +37,7 @@ jobs:
         --url https://api.github.com/repos/${{github.repository}}/branches/main/protection \
         --header 'authorization: Bearer ${{secrets.REPO_TOKEN}}' \
         --header "Accept: application/vnd.github.v3+json" \
-        -d '{
-          "required_status_checks": null,
-          "enforce_admins": null,
-          "required_pull_request_reviews": null,
-          "restrictions": null
-        }' \
+        -d '{"required_status_checks":null,"enforce_admins":null,"required_pull_request_reviews":null,"restrictions":null}'
 
     # - name: Output after Protection is Off
     #   run: "echo latest release: ${{ steps.protection_off.outputs.data }}"
@@ -71,16 +66,7 @@ jobs:
         --url https://api.github.com/repos/${{github.repository}}/branches/main/protection \
         --header 'authorization: Bearer ${{secrets.REPO_TOKEN}}' \
         --header "Accept: application/vnd.github.v3+json" \
-        -d '{
-          "required_status_checks": {
-            "strict": true
-          },
-          "enforce_admins": true,
-          "required_pull_request_reviews": {
-            "required_approving_review_count": 1
-          },
-          "restrictions": null
-        }' \
+        -d '{"required_status_checks":{"strict":true},"enforce_admins":true,"required_pull_request_reviews":{"required_approving_review_count":1},"restrictions":null}'
 
     # - name: Output after Protection is ON
     #   run: "echo latest release: ${{ steps.protection_on.outputs.data }}"

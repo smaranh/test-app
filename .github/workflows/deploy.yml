@@ -35,6 +35,8 @@ jobs:
       uses: octokit/request-action@v2.x
       with:
         route: PUT /repos/:repository/branches/main/protection
+        mediaType: |
+          format: application/json
       env:
         GITHUB_TOKEN: ${{secrets.REPO_TOKEN}}
         INPUT_REPOSITORY: ${{github.repository}}
@@ -71,6 +73,8 @@ jobs:
       uses: octokit/request-action@v2.x
       with:
         route: PUT /repos/:repository/branches/main/protection
+        mediaType: |
+          format: application/json
       env:
         GITHUB_TOKEN: ${{secrets.REPO_TOKEN}}
         INPUT_REPOSITORY: ${{github.repository}}

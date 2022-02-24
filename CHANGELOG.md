@@ -1,3 +1,12 @@
+## [2.5.8](https://github.com/smaranh/test-app/compare/v2.5.7...v2.5.8) (2022-02-24)
+
+
+### Bug Fixes
+
+* use curl ([49c05ce](https://github.com/smaranh/test-app/commit/49c05ce39b6c552df4f2aecbaa13862fa61c2382))
+
+
+
 ## [2.5.7](https://github.com/smaranh/test-app/compare/v2.5.6...v2.5.7) (2022-02-24)
 
 
@@ -26,10 +35,6 @@
 ### Bug Fixes
 
 * turn protection on ([#23](https://github.com/smaranh/test-app/issues/23)) ([5457b49](https://github.com/smaranh/test-app/commit/5457b4901908e4487913d0e0d0cc183cdc9d1e66))
-
-
-
-## [2.5.3](https://github.com/smaranh/test-app/compare/v2.5.2...v2.5.3) (2022-02-24)
 
 
 

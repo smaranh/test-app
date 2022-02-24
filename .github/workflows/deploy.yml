@@ -35,17 +35,17 @@ jobs:
       uses: octokit/request-action@v2.x
       with:
         route: PUT /repos/:repository/branches/main/protection
-        repository: ${{github.repository}}
-        required_status_checks: |
-          null
-        required_pull_request_reviews: |
-          null
-        enforce_admins: |
-          null
-        restrictions: |
-          null
       env:
         GITHUB_TOKEN: ${{secrets.REPO_TOKEN}}
+        INPUT_REPOSITORY: ${{github.repository}}
+        INPUT_REQUIRED_STATUS_CHECKS: |
+          null
+        INPUT_REQUIRED_PULL_REQUEST_REVIEWS: |
+          null
+        INPUT_ENFORCE_ADMINS: |
+          null
+        INPUT_RESTRICTIONS: |
+          null
     # - name: Output after Protection is Off
     #   run: "echo latest release: ${{ steps.protection_off.outputs.data }}"
     - name: Bump version and push tag

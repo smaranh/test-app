@@ -1,3 +1,12 @@
+# [2.6.0](https://github.com/smaranh/test-app/compare/v2.5.11...v2.6.0) (2022-02-24)
+
+
+### Features
+
+* cleanup ([#26](https://github.com/smaranh/test-app/issues/26)) ([b01ab92](https://github.com/smaranh/test-app/commit/b01ab92104477725bcf93ca0004cff5bcc37acc4))
+
+
+
 ## [2.5.11](https://github.com/smaranh/test-app/compare/v2.5.10...v2.5.11) (2022-02-24)
 
 
@@ -31,10 +40,6 @@
 ### Bug Fixes
 
 * use curl ([49c05ce](https://github.com/smaranh/test-app/commit/49c05ce39b6c552df4f2aecbaa13862fa61c2382))
-
-
-
-## [2.5.7](https://github.com/smaranh/test-app/compare/v2.5.6...v2.5.7) (2022-02-24)
 
 
 

@@ -1,3 +1,12 @@
+## [2.5.5](https://github.com/smaranh/test-app/compare/v2.5.4...v2.5.5) (2022-02-24)
+
+
+### Bug Fixes
+
+* format json ([#24](https://github.com/smaranh/test-app/issues/24)) ([77c9e08](https://github.com/smaranh/test-app/commit/77c9e089bbd8874d4298aff9747f8cefc716d294))
+
+
+
 ## [2.5.4](https://github.com/smaranh/test-app/compare/v2.5.3...v2.5.4) (2022-02-24)
 
 
@@ -16,15 +25,6 @@
 
 
 ## [2.5.1](https://github.com/smaranh/test-app/compare/v2.5.0...v2.5.1) (2022-02-23)
-
-
-
-# [2.5.0](https://github.com/smaranh/test-app/compare/v2.4.1...v2.5.0) (2022-02-23)
-
-
-### Features
-
-* check update ([#17](https://github.com/smaranh/test-app/issues/17)) ([7be88da](https://github.com/smaranh/test-app/commit/7be88da9cca48f46d377ac8b0ef63e2613c2e55a))
 
 
 

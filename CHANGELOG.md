@@ -1,3 +1,12 @@
+## [2.5.11](https://github.com/smaranh/test-app/compare/v2.5.10...v2.5.11) (2022-02-24)
+
+
+### Bug Fixes
+
+* no strict ([2197ee6](https://github.com/smaranh/test-app/commit/2197ee6322c4bd9412cefb176c258bd4281bebb4))
+
+
+
 ## [2.5.10](https://github.com/smaranh/test-app/compare/v2.5.9...v2.5.10) (2022-02-24)
 
 
@@ -26,15 +35,6 @@
 
 
 ## [2.5.7](https://github.com/smaranh/test-app/compare/v2.5.6...v2.5.7) (2022-02-24)
-
-
-
-## [2.5.6](https://github.com/smaranh/test-app/compare/v2.5.5...v2.5.6) (2022-02-24)
-
-
-### Bug Fixes
-
-* update back to repo token ([e12fc7b](https://github.com/smaranh/test-app/commit/e12fc7b5754034fbf3f6a87f04a79c05a5af4741))
 
 
 

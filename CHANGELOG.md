@@ -1,3 +1,12 @@
+## [2.5.9](https://github.com/smaranh/test-app/compare/v2.5.8...v2.5.9) (2022-02-24)
+
+
+### Bug Fixes
+
+* compress curl ([1ea81f4](https://github.com/smaranh/test-app/commit/1ea81f4cad6e81387d1693f6b039b7eed6ba11ea))
+
+
+
 ## [2.5.8](https://github.com/smaranh/test-app/compare/v2.5.7...v2.5.8) (2022-02-24)
 
 
@@ -26,15 +35,6 @@
 ### Bug Fixes
 
 * format json ([#24](https://github.com/smaranh/test-app/issues/24)) ([77c9e08](https://github.com/smaranh/test-app/commit/77c9e089bbd8874d4298aff9747f8cefc716d294))
-
-
-
-## [2.5.4](https://github.com/smaranh/test-app/compare/v2.5.3...v2.5.4) (2022-02-24)
-
-
-### Bug Fixes
-
-* turn protection on ([#23](https://github.com/smaranh/test-app/issues/23)) ([5457b49](https://github.com/smaranh/test-app/commit/5457b4901908e4487913d0e0d0cc183cdc9d1e66))
 
 
 

@@ -1,3 +1,7 @@
+## [2.5.7](https://github.com/smaranh/test-app/compare/v2.5.6...v2.5.7) (2022-02-24)
+
+
+
 ## [2.5.6](https://github.com/smaranh/test-app/compare/v2.5.5...v2.5.6) (2022-02-24)
 
 
@@ -26,10 +30,6 @@
 
 
 ## [2.5.3](https://github.com/smaranh/test-app/compare/v2.5.2...v2.5.3) (2022-02-24)
-
-
-
-## [2.5.2](https://github.com/smaranh/test-app/compare/v2.5.1...v2.5.2) (2022-02-23)
 
 
 

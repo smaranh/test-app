@@ -1,4 +1,4 @@
-[![Hello World](https://github.com/smaranh/test-app/actions/workflows/test.yml/badge.svg)](https://github.com/smaranh/test-app/actions/workflows/test.yml)
+[![Deploy](https://github.com/smaranh/test-app/actions/workflows/deploy.yml/badge.svg)](https://github.com/smaranh/test-app/actions/workflows/deploy.yml)
 
 # Getting Started with Create React App
 

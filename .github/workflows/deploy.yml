@@ -39,8 +39,9 @@ jobs:
         --header "Accept: application/vnd.github.v3+json" \
         -d '{"required_status_checks":null,"enforce_admins":false,"required_pull_request_reviews":null,"restrictions":null}'
 
-    # - name: Output after Protection is Off
-    #   run: "echo latest release: ${{ steps.protection_off.outputs.data }}"
+    - name: Output after Protection is Off
+      run: "echo latest release: ${{ steps.protection_off.outputs.data }}"
+
     - name: Bump version and push tag
       id: conventional-changelog
       uses: TriPSs/conventional-changelog-action@v3

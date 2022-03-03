@@ -37,10 +37,11 @@ jobs:
         --url https://api.github.com/repos/${{github.repository}}/branches/main/protection \
         --header 'authorization: Bearer ${{secrets.REPO_TOKEN}}' \
         --header "Accept: application/vnd.github.v3+json" \
-        -d '{"required_status_checks":{"strict":true,"checks":[{"context":"Verify title format","app_id":15368},{"context":"Build App","app_id":15368}]},"enforce_admins":true,"required_pull_request_reviews":{"required_approving_review_count":1},"restrictions":null}'
+        -d '{"required_status_checks":null,"enforce_admins":false,"required_pull_request_reviews":null,"restrictions":null}'
 
-    # - name: Output after Protection is Off
-    #   run: "echo latest release: ${{ steps.protection_off.outputs.data }}"
+    - name: Output after Protection is Off
+      run: "echo latest release: ${{ steps.protection_off.outputs.data }}"
+
     - name: Bump version and push tag
       id: conventional-changelog
       uses: TriPSs/conventional-changelog-action@v3
@@ -67,7 +68,7 @@ jobs:
           -H "Accept: application/vnd.github.v3+json" \
           -H "authorization: Bearer ${{secrets.REPO_TOKEN}}" \
           https://api.github.com/repos/${{github.repository}}/branches/main/protection \
-          -d '{"required_status_checks":{"strict":true,"checks":[]},"enforce_admins":true,"required_pull_request_reviews":{"required_approving_review_count":1},"restrictions":null}'
+          -d '{"required_status_checks":{"strict":true,"checks":[{"context":"Verify title format","app_id":15368},{"context":"Build App","app_id":15368}]},"enforce_admins":true,"required_pull_request_reviews":{"required_approving_review_count":1},"restrictions":null}'
 
   # publish:
   #   name: Publish to Github Packages

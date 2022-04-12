@@ -9,17 +9,17 @@ on:
       - 'CHANGELOG.md'
 
 jobs:
-  # build:
-  #   name: Run CI
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: actions/setup-node@v2
-  #       with:
-  #         node-version: '14.17.5'
-  #     - run: npm ci
-  #     - run: npm test
-  #     - run: npm run build
+  build:
+    name: Run CI
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14.17.5'
+      - run: npm ci
+      - run: npm test
+      - run: npm run build
 
   changelog:
     name: Create a changelog and publish a Release

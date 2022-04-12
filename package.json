@@ -1,6 +1,6 @@
 {
   "name": "test-app",
-  "version": "2.6.0",
+  "version": "2.6.4",
   "private": false,
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
@@ -38,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "conventional-changelog-conventionalcommits": "^4.6.3",
+    "standard-version": "^9.3.2"
   }
 }

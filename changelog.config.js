@@ -14,7 +14,6 @@ module.exports = config({
         { type: 'docs', section: 'Documentation' },
         { type: 'style', section: 'Styles' },
         { type: 'test', section: 'Tests' },
-        { type: 'wip', section: 'WIP', hidden: true },
         { type: 'hide', section: 'Hidden', hidden: true },
         { type: 'release', section: 'Releases', hidden: true },
     ]

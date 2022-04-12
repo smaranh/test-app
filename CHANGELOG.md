@@ -1,9 +1,17 @@
+### [2.6.9](https://github.com/smaranh/test-app/compare/v2.6.8...v2.6.9) (2022-04-12)
+
+
+### Chores
+
+* create changelog ([#39](https://github.com/smaranh/test-app/issues/39)) ([f5a49a4](https://github.com/smaranh/test-app/commit/f5a49a48189a2d9caf2cd67f78b2eb2f251e2afc))
+
 ### [2.6.8](https://github.com/smaranh/test-app/compare/v2.6.7...v2.6.8) (2022-04-12)
 
 
 ### Chores
 
 * Create manual.yml ([#29](https://github.com/smaranh/test-app/issues/29)) ([d342c12](https://github.com/smaranh/test-app/commit/d342c121fe486ccdc5e9f81502dc3d8cabff9d95))
+* **release:** v2.6.8 ([c8fd2c8](https://github.com/smaranh/test-app/commit/c8fd2c896bb0073b9f6658257a66a3a6c9ebebb5))
 
 ### [2.6.7](https://github.com/smaranh/test-app/compare/v2.6.6...v2.6.7) (2022-04-12)
 

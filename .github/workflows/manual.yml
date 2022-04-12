@@ -17,26 +17,23 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  create-pull-request:
-    # The type of runner that the job will run on
+  updateChangelog:
     runs-on: ubuntu-latest
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-    - name: Check out the repo
-      uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Get node version
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14.17.5'
-    - name: Run CI
-      run: npm ci
-    # Runs a single command using the runners shell
-    - name: Create a Pull Request
-      uses: peter-evans/create-pull-request@v4
-      with:
-        branch: 'check-pr/test'
-        commit-message: 'test New PR'
-        title: 'Test New PR'
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Update Changelog
+        run: |
+          curl -o git-chglog -L https://github.com/git-chglog/git-chglog/releases/download/0.9.1/git-chglog_linux_amd64
+          chmod u+x git-chglog
+          ./git-chglog -o CHANGELOG-test.md
+          rm git-chglog
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v4
+        with:
+          commit-message: update changelog
+          title: Update Changelog
+          body: Update changelog to reflect release changes
+          branch: update-changelog
+          base: main

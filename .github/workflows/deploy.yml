@@ -50,7 +50,10 @@ jobs:
         git-message: 'chore(release): {version}'
         version-file: './package.json,./package-lock.json'
         skip-on-empty: 'false'
+        release-count: 0
         output-file: 'CHANGELOG.md'
+        config-file-path: './changelog.config.js'
+
     - name: Check the output version
       run: echo "Output Version - ${{steps.conventional-changelog.outputs.version}}"
     - name: Create Release Draft

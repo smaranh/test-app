@@ -1,9 +1,17 @@
+### [2.6.11](https://github.com/smaranh/test-app/compare/v2.6.10...v2.6.11) (2022-04-12)
+
+
+### Chores
+
+* add git.config ([#41](https://github.com/smaranh/test-app/issues/41)) ([a81e564](https://github.com/smaranh/test-app/commit/a81e564d11808ba6c153be3fd747728b503da3d4))
+
 ### [2.6.10](https://github.com/smaranh/test-app/compare/v2.6.9...v2.6.10) (2022-04-12)
 
 
 ### Chores
 
 * Bump version manually ([#40](https://github.com/smaranh/test-app/issues/40)) ([895a619](https://github.com/smaranh/test-app/commit/895a619fbf4122e5eda1af49159f31e125790b59))
+* **release:** v2.6.10 ([ce1c053](https://github.com/smaranh/test-app/commit/ce1c053704497b511463b89f17c6247cc8295f5d))
 
 ### [2.6.9](https://github.com/smaranh/test-app/compare/v2.6.8...v2.6.9) (2022-04-12)
 

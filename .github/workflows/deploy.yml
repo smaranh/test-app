@@ -23,7 +23,7 @@ jobs:
       with:
         node-version: '14.17.5'
     - name: Run CI
-      run: npm ci && npm test && npm run build
+      run: npm ci
     - name: Main Branch Protection OFF
       id: protection_off
       run: |

@@ -1,8 +1,8 @@
 [![Deploy](https://github.com/smaranh/test-app/actions/workflows/deploy.yml/badge.svg)](https://github.com/smaranh/test-app/actions/workflows/deploy.yml)
 
-# Getting Started with Create React App
+# Implementing Github Actions
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is an experimental repo to test different github actions.
 
 ## Available Scripts
 

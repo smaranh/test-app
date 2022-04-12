@@ -9,32 +9,20 @@ on:
       - 'CHANGELOG.md'
 
 jobs:
-  build:
-    name: Run CI
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
-        with:
-          node-version: '14.17.5'
-      - run: npm ci
-      - run: npm test
-      - run: npm run build
 
   changelog:
     name: Create a changelog and publish a Release
     runs-on: ubuntu-latest
-    needs: build
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-    # - name: Get node version
-    #   uses: actions/setup-node@v2
-    #   with:
-    #     node-version: '14.17.5'
-    #   run: npm ci && npm test && npm run build
+    - name: Get node version
+      uses: actions/setup-node@v2
+      with:
+        node-version: '14.17.5'
+      run: npm ci && npm test && npm run build
     - name: Main Branch Protection OFF
       id: protection_off
       run: |

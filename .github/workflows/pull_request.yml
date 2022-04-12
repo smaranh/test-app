@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: morrisoncole/pr-lint-action@v1.6.0
         with:
-          title-regex: '^(BREAKING CHANGE|build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([a-z ]+\))?: [\w ]+$'
+          title-regex: '^(BREAKING CHANGE|build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\([a-z ]+\))?: .+$'
           on-failed-regex-fail-action: true
           on-failed-regex-comment: >
             ## Pull request title linting :rotating_light:

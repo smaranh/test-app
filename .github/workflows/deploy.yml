@@ -1,81 +1,81 @@
-name: Deploy
+# name: Deploy
 
-on: 
-  push:
-    branches:
-      - main
-    paths-ignore:
-      - 'package.json'
-      - 'CHANGELOG.md'
+# on: 
+#   push:
+#     branches:
+#       - main
+#     paths-ignore:
+#       - 'package.json'
+#       - 'CHANGELOG.md'
 
-jobs:
+# jobs:
 
-  changelog:
-    name: Create a changelog and publish a Release
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check out the repo
-      uses: actions/checkout@v2
-      with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-    - name: Get node version
-      uses: actions/setup-node@v2
-      with:
-        node-version: '14.17.5'
-    - name: Run CI
-      run: npm ci
-    - name: Main Branch Protection OFF
-      id: protection_off
-      run: |
-        curl --request PUT \
-        --url https://api.github.com/repos/${{github.repository}}/branches/main/protection \
-        --header 'authorization: Bearer ${{secrets.REPO_TOKEN}}' \
-        --header "Accept: application/vnd.github.v3+json" \
-        -d '{"required_status_checks":null,"enforce_admins":false,"required_pull_request_reviews":null,"restrictions":null}'
+#   changelog:
+#     name: Create a changelog and publish a Release
+#     runs-on: ubuntu-latest
+#     steps:
+#     - name: Check out the repo
+#       uses: actions/checkout@v2
+#       with:
+#         token: ${{ secrets.GITHUB_TOKEN }}
+#     - name: Get node version
+#       uses: actions/setup-node@v2
+#       with:
+#         node-version: '14.17.5'
+#     - name: Run CI
+#       run: npm ci
+#     - name: Main Branch Protection OFF
+#       id: protection_off
+#       run: |
+#         curl --request PUT \
+#         --url https://api.github.com/repos/${{github.repository}}/branches/main/protection \
+#         --header 'authorization: Bearer ${{secrets.REPO_TOKEN}}' \
+#         --header "Accept: application/vnd.github.v3+json" \
+#         -d '{"required_status_checks":null,"enforce_admins":false,"required_pull_request_reviews":null,"restrictions":null}'
 
-    - name: Output after Protection is Off
-      run: "echo latest release: ${{ steps.protection_off.outputs.data }}"
+#     - name: Output after Protection is Off
+#       run: "echo latest release: ${{ steps.protection_off.outputs.data }}"
 
-    - name: Bump version and push tag
-      id: conventional-changelog
-      uses: TriPSs/conventional-changelog-action@v3
-      with:
-        github-token: ${{ secrets.GITHUB_TOKEN }}
-        git-message: 'chore(release): {version}'
-        version-file: './package.json,./package-lock.json'
-        skip-on-empty: 'false'
-        release-count: 0
-        output-file: 'CHANGELOG.md'
-        config-file-path: './changelog.config.js'
+#     - name: Bump version and push tag
+#       id: conventional-changelog
+#       uses: TriPSs/conventional-changelog-action@v3
+#       with:
+#         github-token: ${{ secrets.GITHUB_TOKEN }}
+#         git-message: 'chore(release): {version}'
+#         version-file: './package.json,./package-lock.json'
+#         skip-on-empty: 'false'
+#         release-count: 0
+#         output-file: 'CHANGELOG.md'
+#         config-file-path: './changelog.config.js'
 
-    - name: Check the output version
-      run: echo "Output Version - ${{steps.conventional-changelog.outputs.version}}"
-    - name: Create Release Draft
-      uses: release-drafter/release-drafter@v5
-      with:
-        publish: true
-        version: ${{steps.conventional-changelog.outputs.version}}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - name: Main Branch Protection ON
-      id: protection_on
-      run: |
-        curl \
-          -X PUT \
-          -H "Accept: application/vnd.github.v3+json" \
-          -H "authorization: Bearer ${{secrets.REPO_TOKEN}}" \
-          https://api.github.com/repos/${{github.repository}}/branches/main/protection \
-          -d '{"required_status_checks":{"strict":true,"checks":[{"context":"Verify title format","app_id":15368},{"context":"Build App","app_id":15368}]},"enforce_admins":true,"required_pull_request_reviews":{"required_approving_review_count":1},"restrictions":null}'
+#     - name: Check the output version
+#       run: echo "Output Version - ${{steps.conventional-changelog.outputs.version}}"
+#     - name: Create Release Draft
+#       uses: release-drafter/release-drafter@v5
+#       with:
+#         publish: true
+#         version: ${{steps.conventional-changelog.outputs.version}}
+#       env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#     - name: Main Branch Protection ON
+#       id: protection_on
+#       run: |
+#         curl \
+#           -X PUT \
+#           -H "Accept: application/vnd.github.v3+json" \
+#           -H "authorization: Bearer ${{secrets.REPO_TOKEN}}" \
+#           https://api.github.com/repos/${{github.repository}}/branches/main/protection \
+#           -d '{"required_status_checks":{"strict":true,"checks":[{"context":"Verify title format","app_id":15368},{"context":"Build App","app_id":15368}]},"enforce_admins":true,"required_pull_request_reviews":{"required_approving_review_count":1},"restrictions":null}'
 
-  # publish:
-  #   name: Publish to Github Packages
-  #   runs-on: ubuntu-latest
-  #   needs: changelog
-  #   steps:
-  #     - uses: actions/checkout@v2
-  #     - uses: actions/setup-node@v2
-  #       with:
-  #         node-version: '14.17.5'
-  #     - run: echo //npm.pkg.github.com/:_authToken=${{secrets.NPM_TOKEN}} >> ~/.npmrc
-  #     - run: npm ci
-  #     - run: npm publish
+#   # publish:
+#   #   name: Publish to Github Packages
+#   #   runs-on: ubuntu-latest
+#   #   needs: changelog
+#   #   steps:
+#   #     - uses: actions/checkout@v2
+#   #     - uses: actions/setup-node@v2
+#   #       with:
+#   #         node-version: '14.17.5'
+#   #     - run: echo //npm.pkg.github.com/:_authToken=${{secrets.NPM_TOKEN}} >> ~/.npmrc
+#   #     - run: npm ci
+#   #     - run: npm publish

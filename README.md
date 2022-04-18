@@ -1,4 +1,4 @@
-[![Deploy](https://github.com/smaranh/test-app/actions/workflows/deploy.yml/badge.svg)](https://github.com/smaranh/test-app/actions/workflows/deploy.yml)
+[![Release workflow](https://github.com/smaranh/test-app/actions/workflows/release.yml/badge.svg?branch=main)](https://github.com/smaranh/test-app/actions/workflows/release.yml)
 
 # Implementing Github Actions
 

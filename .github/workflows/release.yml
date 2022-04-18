@@ -34,4 +34,5 @@ jobs:
       with:
         publish: false
         version: ${{ steps.tag-action.current-version }}"
-        
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

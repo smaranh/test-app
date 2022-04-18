@@ -11,6 +11,7 @@ module.exports = config({
         { type: 'ci', section: 'Continuous Integration' },
         { type: 'refactor', section: 'Code Refactoring' },
         { type: 'chore', section: 'Chores' },
+        { type: '', section: 'Chores' },
         { type: 'docs', section: 'Documentation' },
         { type: 'style', section: 'Styles' },
         { type: 'test', section: 'Tests' },

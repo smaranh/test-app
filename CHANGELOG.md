@@ -1,4 +1,17 @@
+### [2.6.13](https://github.com/smaranh/test-app/compare/v2.6.12...v2.6.13) (2022-04-18)
+
+
+### Chores
+
+* Update changelog.config and release.yml ([#47](https://github.com/smaranh/test-app/issues/47)) ([91015d5](https://github.com/smaranh/test-app/commit/91015d5ed2accc1577ac03d0f621cb2501ab3ac2))
+
 ### [2.6.12](https://github.com/smaranh/test-app/compare/v2.6.11...v2.6.12) (2022-04-18)
+
+
+### Chores
+
+* Create release.yml (#46) ([d9920e2](https://github.com/smaranh/test-app/commit/d9920e20dd0f4da498d01cde502fc2f73df59436)), closes [#46](https://github.com/smaranh/test-app/issues/46)
+* **release:** v2.6.12 ([3424586](https://github.com/smaranh/test-app/commit/34245861af7060a54638cf729fefe6640ba9a08c))
 
 ### [2.6.11](https://github.com/smaranh/test-app/compare/v2.6.10...v2.6.11) (2022-04-12)
 
@@ -45,6 +58,7 @@
 
 ### Chores
 
+* make sure you run CI (#33) ([390da75](https://github.com/smaranh/test-app/commit/390da753cd68faf0c22a00931c8181004524f82e)), closes [#33](https://github.com/smaranh/test-app/issues/33)
 * add packages ([#32](https://github.com/smaranh/test-app/issues/32)) ([6d5e046](https://github.com/smaranh/test-app/commit/6d5e0460a82d922af573574b1f334fedf6d3304d))
 * Changelog config ([#31](https://github.com/smaranh/test-app/issues/31)) ([32dcb20](https://github.com/smaranh/test-app/commit/32dcb20cdab8d1453537a79d6246a8ecce94c6e3))
 * Run ci ([#34](https://github.com/smaranh/test-app/issues/34)) ([af5c685](https://github.com/smaranh/test-app/commit/af5c68565a424ed9448eba26bf81bf9e554a462b))
@@ -144,6 +158,7 @@
 
 ### Chores
 
+* github token (#25) ([bbd31c6](https://github.com/smaranh/test-app/commit/bbd31c65174ebe9d9700bb185fceec54f6dd2248)), closes [#25](https://github.com/smaranh/test-app/issues/25)
 * **release:** v2.5.6 ([ac90d90](https://github.com/smaranh/test-app/commit/ac90d90dc415a10ae5156c4fa2839fc95ae54150))
 
 ### [2.5.5](https://github.com/smaranh/test-app/compare/v2.5.4...v2.5.5) (2022-02-24)
@@ -175,6 +190,7 @@
 
 ### Chores
 
+* move to env variables (#22) ([049e937](https://github.com/smaranh/test-app/commit/049e937434379a5134208a8a6432b4a91a7fb190)), closes [#22](https://github.com/smaranh/test-app/issues/22)
 * **release:** v2.5.3 ([6128e7a](https://github.com/smaranh/test-app/commit/6128e7a9f6116f4ee52816dc278e51d77e2f8024))
 
 ### [2.5.2](https://github.com/smaranh/test-app/compare/v2.5.1...v2.5.2) (2022-02-23)
@@ -182,6 +198,7 @@
 
 ### Chores
 
+* check deploy (#21) ([9809482](https://github.com/smaranh/test-app/commit/9809482fa871d342b25180ce6a3761504759211b)), closes [#21](https://github.com/smaranh/test-app/issues/21)
 * **release:** v2.5.2 ([175dcae](https://github.com/smaranh/test-app/commit/175dcaee6d32fac78957ae967d1d32202dd2ad8a))
 
 ### [2.5.1](https://github.com/smaranh/test-app/compare/v2.5.0...v2.5.1) (2022-02-23)
@@ -189,6 +206,9 @@
 
 ### Chores
 
+* check again (#20) ([ab92c1b](https://github.com/smaranh/test-app/commit/ab92c1bb8bd7237a81da5b564e225a98996974b9)), closes [#20](https://github.com/smaranh/test-app/issues/20)
+* update url (#19) ([fba0e6a](https://github.com/smaranh/test-app/commit/fba0e6ad6417fc3d59ce6e7219ac1d396986167c)), closes [#19](https://github.com/smaranh/test-app/issues/19)
+* workaround (#18) ([69cdea6](https://github.com/smaranh/test-app/commit/69cdea659592bba647a5447efccbb199567e9abb)), closes [#18](https://github.com/smaranh/test-app/issues/18)
 * **release:** v2.5.1 ([3b3d321](https://github.com/smaranh/test-app/commit/3b3d321205640fc3f2e3c0c0deee338bd0c81618))
 
 ## [2.5.0](https://github.com/smaranh/test-app/compare/v2.4.1...v2.5.0) (2022-02-23)
@@ -209,6 +229,11 @@
 ### Bug Fixes
 
 * Test ([#16](https://github.com/smaranh/test-app/issues/16)) ([4ac4147](https://github.com/smaranh/test-app/commit/4ac41470e739b2c78bd441f31f336d827598585f))
+
+
+### Chores
+
+* do not commit (#15) ([41bbd3a](https://github.com/smaranh/test-app/commit/41bbd3a83e8426f3c0228dcdb2f6394b756d08ab)), closes [#15](https://github.com/smaranh/test-app/issues/15)
 
 ## [2.4.0](https://github.com/smaranh/test-app/compare/v2.3.5...v2.4.0) (2022-02-23)
 
@@ -238,6 +263,11 @@
 
 ### [2.3.3](https://github.com/smaranh/test-app/compare/v2.3.2...v2.3.3) (2022-02-23)
 
+
+### Chores
+
+* use morrisoncole pr-lint (#12) ([4282759](https://github.com/smaranh/test-app/commit/42827593b64d0e2a054cc7adf33dbd48e0a90e03)), closes [#12](https://github.com/smaranh/test-app/issues/12)
+
 ### [2.3.2](https://github.com/smaranh/test-app/compare/v2.3.1...v2.3.2) (2022-02-23)
 
 
@@ -248,6 +278,7 @@
 
 ### Chores
 
+* echo version (#10) ([16cd2e9](https://github.com/smaranh/test-app/commit/16cd2e9bbe9b5ed021f90c6470841c996803555e)), closes [#10](https://github.com/smaranh/test-app/issues/10)
 * **release:** v2.3.2 ([82f3797](https://github.com/smaranh/test-app/commit/82f3797c5505091e9a8123e860ea0a05f807b76a))
 
 ### [2.3.1](https://github.com/smaranh/test-app/compare/v2.0.5...v2.3.1) (2022-02-23)
@@ -348,7 +379,7 @@
 
 * **release:** v1.0.0 ([b48ef46](https://github.com/smaranh/test-app/commit/b48ef4644d0c4a0520edb7a3332b67b307aaf2bc))
 
-## [0.2.0](https://github.com/smaranh/test-app/compare/a649e2d5b93c68875634701b3c463a4aef09b983...v0.2.0) (2022-02-22)
+## [0.2.0](https://github.com/smaranh/test-app/compare/b7e95beca471622e94a89504726a419c880db70e...v0.2.0) (2022-02-22)
 
 
 ### Features
@@ -364,5 +395,14 @@
 
 ### Chores
 
+* add pull request yml ([c211b3c](https://github.com/smaranh/test-app/commit/c211b3c4dece505bf5413a549247cf29b5762216))
+* build the app ([651707e](https://github.com/smaranh/test-app/commit/651707e8d1c7ae03222a0490a6395f55b157020e))
+* check if valid ([721aa08](https://github.com/smaranh/test-app/commit/721aa087b081a4da224da5ad6f479d0fe99544c4))
+* run to jobs ([6e1a674](https://github.com/smaranh/test-app/commit/6e1a6747c51661284bd3cbfe18963e7d08dacae4))
+* add badge to README ([51fb4c7](https://github.com/smaranh/test-app/commit/51fb4c748bec6f44fa2d8be5d8f71a293b02ba4d))
+* fix indentation ([0668519](https://github.com/smaranh/test-app/commit/066851907311423eb0a45b606e8c765c83358dda))
+* hello world action ([ea30d9a](https://github.com/smaranh/test-app/commit/ea30d9ad4748d145be1e90221897cc1702e5aff1))
+* adding test.yml ([065ec9c](https://github.com/smaranh/test-app/commit/065ec9ceb0434abb6ec11c13e139a3aab7188d6f))
+* Initialize project using Create React App ([b7e95be](https://github.com/smaranh/test-app/commit/b7e95beca471622e94a89504726a419c880db70e))
 * **release:** v0.2.0 ([339ebfb](https://github.com/smaranh/test-app/commit/339ebfb12bfb429b08772a6209d3c65b63142d09))
 

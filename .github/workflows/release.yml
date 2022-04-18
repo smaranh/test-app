@@ -26,13 +26,13 @@ jobs:
       uses: salsify/action-detect-and-tag-new-version@v2.0.1
     - name: Print the new version
       run: |
-        echo "Current V ${{ steps.tag-action.current-version }}"
-        echo "Previous V ${{ steps.tag-action.previous-version }}"
-        echo "Tag ${{ steps.tag-action.tag }}"
+        echo "Current V ${{ steps.tag-action.outputs.current-version }}"
+        echo "Previous V ${{ steps.tag-action.outputs.previous-version }}"
+        echo "Tag ${{ steps.tag-action.outputs.tag }}"
     - name: Create Release Draft
       uses: release-drafter/release-drafter@v5
       with:
         publish: false
-        version: ${{ steps.tag-action.current-version }}"
+        version: ${{ steps.tag-action.outputs.current-version }}"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

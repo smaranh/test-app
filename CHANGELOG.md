@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 2.12.0 (2022-04-18)
+
+
+### Chores
+
+* Merge branch 'main' of https://github.com/smaranh/test-app ([524a207](https://github.com/smaranh/test-app/commits/524a207bb16c5631beb06783bd3a415ad437dbbb))
+
 ## 2.11.0 (2022-04-18)
 
 

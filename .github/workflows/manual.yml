@@ -1,19 +1,20 @@
 # This is a basic workflow that is manually triggered
-name: Manual workflow
+name: Create Release PR
 
 # Controls when the action will run. Workflow runs when manually triggered using the UI
 # or API.
 on:
   workflow_dispatch:
-    # Inputs the workflow accepts.
-    # inputs:
-    #   name:
-    #     # Friendly description to be shown in the UI instead of 'name'
-    #     description: 'Person to greet'
-    #     # Default value if no value is explicitly provided
-    #     default: 'World'
-    #     # Input has to be provided for the workflow to run
-    #     required: true
+    inputs:
+      version:
+        type: choice
+        description: Bump Version
+        default: minor
+        required: true
+        options:
+        - patch
+        - minor
+        - major
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -32,25 +33,13 @@ jobs:
         run: |
           git config user.name ${{ github.actor }}
           git config user.email '<>'
-          npm run bump -- --release-as minor
-  # updateChangelog:
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #       with:
-  #         fetch-depth: 0
-  #     - name: Update Changelog
-  #       run: |
-  #         curl -o git-chglog -L https://github.com/git-chglog/git-chglog/releases/download/0.9.1/git-chglog_linux_amd64
-  #         chmod u+x git-chglog
-  #         ./git-chglog -o CHANGELOG-test.md
-  #         rm git-chglog
+          npm run bump -- --release-as ${{ github.event.inputs.version }}
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
           commit-message: bump version
           title: 'chore(release): bump version'
           body: Bump version
-          branch: test-run
+          branch: test-release
           base: main
           labels: stagex

@@ -34,9 +34,6 @@ jobs:
           git config user.name ${{ github.actor }}
           git config user.email '<>'
           npm run bump -- --release-as ${{ github.event.inputs.version }}
-          env
-          echo
-          cat CHANGELOG.md
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:

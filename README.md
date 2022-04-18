@@ -6,8 +6,6 @@ This is an experimental repo to test different github actions.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
-
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Learn More

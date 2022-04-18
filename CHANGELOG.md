@@ -1,3 +1,9 @@
+# Changelog
+
+All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## 2.7.0 (2022-04-18)
+
 ### [2.6.13](https://github.com/smaranh/test-app/compare/v2.6.12...v2.6.13) (2022-04-18)
 
 
@@ -405,4 +411,3 @@
 * adding test.yml ([065ec9c](https://github.com/smaranh/test-app/commit/065ec9ceb0434abb6ec11c13e139a3aab7188d6f))
 * Initialize project using Create React App ([b7e95be](https://github.com/smaranh/test-app/commit/b7e95beca471622e94a89504726a419c880db70e))
 * **release:** v0.2.0 ([339ebfb](https://github.com/smaranh/test-app/commit/339ebfb12bfb429b08772a6209d3c65b63142d09))
-

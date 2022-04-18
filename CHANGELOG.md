@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 2.11.0 (2022-04-18)
+
+
+### Bug Fixes
+
+* typo ([#57](https://github.com/smaranh/test-app/issues/57)) ([48f6c29](https://github.com/smaranh/test-app/commit/48f6c29255102e9367cd8276db28fa749d0f96a6))
+
 ## 2.10.0 (2022-04-18)
 
 

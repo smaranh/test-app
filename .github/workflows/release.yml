@@ -19,11 +19,11 @@ jobs:
     steps:
     - name: Check the Github Values
       run: |
-        echo "Head ref "
+        echo "Head ref ${{ github.event.pull_request.head.ref }}"
         echo "Merged status ${{ github.event.pull_request.merged }}"
   # This workflow contains a single job called "greet"
   release-workflow:
-    if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == test-release
+    if: github.event.pull_request.merged == true && github.event.pull_request.head.ref == "test-release"
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -46,6 +46,6 @@ jobs:
       uses: release-drafter/release-drafter@v5
       with:
         publish: false
-        version: ${{ steps.tag-action.outputs.current-version }}"
+        version: "${{ steps.tag-action.outputs.current-version }}"
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

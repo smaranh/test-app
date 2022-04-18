@@ -49,7 +49,7 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           commit-message: bump version
-          title: 'chore: bump version'
+          title: 'chore(release): bump version'
           body: Bump version
           branch: test-run
           base: main

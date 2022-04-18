@@ -1,4 +1,4 @@
-name-template: 'v$RESOLVED_VERSION 🤘'
+name-template: '[$RESOLVED_VERSION] \`r format(Sys.Date(), "%y-%m-%d")`\'
 tag-template: 'v$RESOLVED_VERSION'
 categories:
   - title: '🚀 Features'

@@ -14,5 +14,7 @@
         { "type": "test", "section": "Tests" },
         { "type": "hide", "section": "Hidden", "hidden": true },
         { "type": "release", "section": "Releases", "hidden": true }
-    ]
+    ],
+    "commitUrlFormat": "https://github.com/smaranh/test-app/commits/{{hash}}",
+    "compareUrlFormat": "https://github.com/smaranh/test-app/compare/{{previousTag}}...{{currentTag}}"
 }

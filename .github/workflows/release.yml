@@ -29,4 +29,9 @@ jobs:
         echo "Current V ${{ steps.tag-action.current-version }}"
         echo "Previous V ${{ steps.tag-action.previous-version }}"
         echo "Tag ${{ steps.tag-action.tag }}"
+    - name: Create Release Draft
+      uses: release-drafter/release-drafter@v5
+      with:
+        publish: false
+        version: ${{ steps.tag-action.current-version }}"
         

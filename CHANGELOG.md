@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## 2.10.0 (2022-04-18)
+
+
+### Chores
+
+* Changelog ([#54](https://github.com/smaranh/test-app/issues/54)) ([9d30a6c](https://github.com/smaranh/test-app/commit/9d30a6c9cdba304d8fea9253d2a48f31df2d7b7e))
+
 ## 2.8.0 (2022-04-18)
 
 ## 2.7.0 (2022-04-18)
